@@ -20,17 +20,21 @@ def triangle(t, height, top_angle):
     t.fd(side_length)
     t.rt(180 - top_angle / 2)
 
-def pie(t ,segment_num, radius):
-    turn_angle = 360.0 / segment_num
 
+def pie(t, segment_num, height):
+    """ Draw pie
+    t : Turtle
+    segment_num : Number of segment in pie
+    height : Height of the triangle
+    """
+    turn_angle = 360.0 / segment_num
     
     for i in range(segment_num):
-        triangle(t, radius, turn_angle)
+        triangle(t, height, turn_angle)
         t.rt(turn_angle)
 
 
 pie(draw, 10, 60)
-
 
 turtle.mainloop()
 
