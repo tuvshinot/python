@@ -4,14 +4,16 @@ import time
 
 start = time.perf_counter()
 
+
 def do_something(second=1):
     print(f'Sleeping {second} sec')
     time.sleep(second)
     return f'Done sleeping {second}'
 
+
 with concurrent.futures.ThreadPoolExecutor() as executor:
-    f1 = executor.submit(do_something, 1.3) # second=1.3
-    f2 = executor.submit(do_something, 1.3) # second=1.3
+    f1 = executor.submit(do_something, 1.3)  # second=1.3
+    f2 = executor.submit(do_something, 1.3)  # second=1.3
     print(f1.result())
     print(f2.result())
 

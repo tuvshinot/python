@@ -2,6 +2,7 @@ import time
 import concurrent.futures
 from PIL import Image, ImageFilter
 
+
 img_names = [
     'photo-1516117172878-fd2c41f4a759.jpg',
     'photo-1532009324734-20a7a5813719.jpg',
